@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimaryDark">@color/secondary_color</item>
+    </style>
+    <style name="SplashTheme" parent="AppTheme">
+        <item name="android:windowBackground">@drawable/splashscreen</item>
+    </style>
+
+    <style name="boxes">
+        <item name="android:layout_width">@dimen/image_dimension</item>
+        <item name="android:layout_height">@dimen/image_dimension</item>
+        <item name="android:src">@drawable/ficha_vacia</item>
+    </style>
+
+    <style name="arrows">
+        <item name="android:layout_width">@dimen/image_dimension</item>
+        <item name="android:layout_height">@dimen/image_dimension</item>
+        <item name="android:src">@drawable/arrow</item>
+    </style>
+</resources>
