@@ -10,10 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".GameActivity"
+            android:exported="true" />
+        <activity
             android:name=".MainActivity"
-            android:theme="@style/SplashTheme"
+            android:exported="true"
             android:screenOrientation="portrait"
-            android:exported="true">
+            android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

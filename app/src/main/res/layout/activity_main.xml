@@ -8,363 +8,48 @@
     tools:context=".MainActivity">
 
     <ImageView
-        android:id="@+id/title"
+        android:id="@+id/logo"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="350dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="5dp"
         android:layout_marginStart="40dp"
         android:layout_marginEnd="40dp"
-        android:src="@drawable/title"/>
-
-
-    <LinearLayout
-        android:id="@+id/linearBoard"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginTop="10dp"
-        app:layout_constraintBottom_toTopOf="@id/btnTurn"
-        app:layout_constraintTop_toBottomOf="@+id/title"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:id="@+id/arrow0"
-                android:contentDescription="@string/imageview_de_casilla"
-                style="@style/arrows"/>
-
-            <ImageView
-                android:id="@+id/arrow1"
-                android:contentDescription="@string/imageview_de_casilla"
-                style="@style/arrows" />
-
-            <ImageView
-                android:id="@+id/arrow2"
-                android:contentDescription="@string/imageview_de_casilla"
-                style="@style/arrows" />
-
-            <ImageView
-                android:id="@+id/arrow3"
-                android:contentDescription="@string/imageview_de_casilla"
-                style="@style/arrows" />
-
-            <ImageView
-                android:id="@+id/arrow4"
-                android:contentDescription="@string/imageview_de_casilla"
-                style="@style/arrows" />
-
-            <ImageView
-                android:id="@+id/arrow5"
-                android:contentDescription="@string/imageview_de_casilla"
-                style="@style/arrows" />
-
-            <ImageView
-                android:id="@+id/arrow6"
-                android:contentDescription="@string/imageview_de_casilla"
-                style="@style/arrows" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:id="@+id/box00"
-                android:contentDescription="@string/imageview_de_casilla"
-                style="@style/boxes"/>
-
-            <ImageView
-                android:id="@+id/box01"
-                android:contentDescription="@string/imageview_de_casilla"
-                style="@style/boxes" />
-
-            <ImageView
-                android:id="@+id/box02"
-                android:contentDescription="@string/imageview_de_casilla"
-                style="@style/boxes" />
-
-            <ImageView
-                android:id="@+id/box03"
-                android:contentDescription="@string/imageview_de_casilla"
-                style="@style/boxes" />
-
-            <ImageView
-                android:id="@+id/box04"
-                android:contentDescription="@string/imageview_de_casilla"
-                style="@style/boxes" />
-
-            <ImageView
-                android:id="@+id/box05"
-                android:contentDescription="@string/imageview_de_casilla"
-                style="@style/boxes" />
-
-            <ImageView
-                android:id="@+id/box06"
-                android:contentDescription="@string/imageview_de_casilla"
-                style="@style/boxes" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:id="@+id/box10"
-                android:contentDescription="@string/imageview_de_casilla"
-                style="@style/boxes" />
-
-            <ImageView
-                android:id="@+id/box11"
-                android:contentDescription="@string/imageview_de_casilla"
-                style="@style/boxes" />
-
-            <ImageView
-                android:id="@+id/box12"
-                android:contentDescription="@string/imageview_de_casilla"
-                style="@style/boxes" />
-
-            <ImageView
-                android:id="@+id/box13"
-                android:contentDescription="@string/imageview_de_casilla"
-                style="@style/boxes" />
-
-            <ImageView
-                android:id="@+id/box14"
-                android:contentDescription="@string/imageview_de_casilla"
-                style="@style/boxes" />
-
-            <ImageView
-                android:id="@+id/box15"
-                android:contentDescription="@string/imageview_de_casilla"
-                style="@style/boxes" />
-
-            <ImageView
-                android:id="@+id/box16"
-                android:contentDescription="@string/imageview_de_casilla"
-                style="@style/boxes" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <ImageView
-                android:id="@+id/box20"
-                android:contentDescription="@string/imageview_de_casilla"
-                style="@style/boxes" />
-            <ImageView
-                android:id="@+id/box21"
-                android:contentDescription="@string/imageview_de_casilla"
-                style="@style/boxes" />
-            <ImageView
-                android:id="@+id/box22"
-                android:contentDescription="@string/imageview_de_casilla"
-                style="@style/boxes" />
-            <ImageView
-                android:id="@+id/box23"
-                android:contentDescription="@string/imageview_de_casilla"
-                style="@style/boxes" />
-            <ImageView
-                android:id="@+id/box24"
-                android:contentDescription="@string/imageview_de_casilla"
-                style="@style/boxes" />
-            <ImageView
-                android:id="@+id/box25"
-                android:contentDescription="@string/imageview_de_casilla"
-                style="@style/boxes" />
-            <ImageView
-                android:id="@+id/box26"
-                android:contentDescription="@string/imageview_de_casilla"
-                style="@style/boxes" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <ImageView
-                android:id="@+id/box30"
-                android:contentDescription="@string/imageview_de_casilla"
-                style="@style/boxes" />
-            <ImageView
-                android:id="@+id/box31"
-                android:contentDescription="@string/imageview_de_casilla"
-                style="@style/boxes" />
-            <ImageView
-                android:id="@+id/box32"
-                android:contentDescription="@string/imageview_de_casilla"
-                style="@style/boxes" />
-            <ImageView
-                android:id="@+id/box33"
-                android:contentDescription="@string/imageview_de_casilla"
-                style="@style/boxes" />
-            <ImageView
-                android:id="@+id/box34"
-                android:contentDescription="@string/imageview_de_casilla"
-                style="@style/boxes" />
-            <ImageView
-                android:id="@+id/box35"
-                android:contentDescription="@string/imageview_de_casilla"
-                style="@style/boxes" />
-            <ImageView
-                android:id="@+id/box36"
-                android:contentDescription="@string/imageview_de_casilla"
-                style="@style/boxes" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <ImageView
-                android:id="@+id/box40"
-                android:contentDescription="@string/imageview_de_casilla"
-                style="@style/boxes"/>
-            <ImageView
-                android:id="@+id/box41"
-                android:contentDescription="@string/imageview_de_casilla"
-                style="@style/boxes"/>
-            <ImageView
-                android:id="@+id/box42"
-                android:contentDescription="@string/imageview_de_casilla"
-                style="@style/boxes" />
-            <ImageView
-                android:id="@+id/box43"
-                android:contentDescription="@string/imageview_de_casilla"
-                style="@style/boxes" />
-            <ImageView
-                android:id="@+id/box44"
-                android:contentDescription="@string/imageview_de_casilla"
-                style="@style/boxes" />
-            <ImageView
-                android:id="@+id/box45"
-                android:contentDescription="@string/imageview_de_casilla"
-                style="@style/boxes" />
-            <ImageView
-                android:id="@+id/box46"
-                android:contentDescription="@string/imageview_de_casilla"
-                style="@style/boxes" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <ImageView
-                android:id="@+id/box50"
-                android:contentDescription="@string/imageview_de_casilla"
-                style="@style/boxes"/>
-            <ImageView
-                android:id="@+id/box51"
-                android:contentDescription="@string/imageview_de_casilla"
-                style="@style/boxes"/>
-            <ImageView
-                android:id="@+id/box52"
-                android:contentDescription="@string/imageview_de_casilla"
-                style="@style/boxes"/>
-            <ImageView
-                android:id="@+id/box53"
-                android:contentDescription="@string/imageview_de_casilla"
-                style="@style/boxes"/>
-            <ImageView
-                android:id="@+id/box54"
-                android:contentDescription="@string/imageview_de_casilla"
-                style="@style/boxes" />
-            <ImageView
-                android:id="@+id/box55"
-                android:contentDescription="@string/imageview_de_casilla"
-                style="@style/boxes" />
-            <ImageView
-                android:id="@+id/box56"
-                android:contentDescription="@string/imageview_de_casilla"
-                style="@style/boxes" />
-        </LinearLayout>
-
-    </LinearLayout>
+        android:src="@drawable/logo"/>
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnTurn"
-        android:layout_width="wrap_content"
+        android:id="@+id/btnPlay"
+        app:cornerRadius="13dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Turno"
-        android:backgroundTint="@color/red_piece"
+        android:text="@string/play"
+        android:layout_marginStart="80dp"
+        android:layout_marginEnd="80dp"
         android:textSize="20sp"
-        android:layout_marginTop="8dp"
-        android:clickable="false"
-        app:layout_constraintTop_toBottomOf="@id/linearBoard"
-        app:layout_constraintBottom_toTopOf="@+id/linearScores"
+        app:layout_constraintVertical_bias="0.4"
+        android:backgroundTint="@color/secondary_color"
+        app:layout_constraintTop_toBottomOf="@+id/logo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnInfo"
+        app:cornerRadius="13dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/info"
+        android:layout_marginStart="80dp"
+        android:layout_marginEnd="80dp"
+        android:textSize="20sp"
+        android:backgroundTint="#727D87"
+        app:layout_constraintTop_toBottomOf="@+id/btnPlay"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
 
-    <LinearLayout
-        android:id="@+id/linearScores"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@id/btnTurn"
-        app:layout_constraintBottom_toTopOf="@id/btnResetGame"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnRedScore"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:backgroundTint="@color/red_piece"
-            android:clickable="false"
-            android:text="0"
-            android:textSize="20sp"/>
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnYellowScore"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:backgroundTint="@color/yellow_piece"
-            android:clickable="false"
-            android:text="0"
-            android:textSize="20sp"/>
-
-    </LinearLayout>
-
-
-
-
-
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnResetGame"
-        app:cornerRadius="13dp"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Reiniciar\npartida"
-        android:layout_margin="8dp"
-        android:backgroundTint="@color/secondary_color"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/btnResetCounter"/>
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnResetCounter"
-        app:cornerRadius="13dp"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Reiniciar\ncontador"
-        android:layout_margin="8dp"
-        android:backgroundTint="@color/secondary_color"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@id/btnResetGame"
-        app:layout_constraintEnd_toEndOf="parent"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

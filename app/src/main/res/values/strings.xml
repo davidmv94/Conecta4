@@ -1,4 +1,11 @@
 <resources>
     <string name="app_name">Conecta4</string>
     <string name="imageview_de_casilla">ImageView de Casilla</string>
+    <string name="_0">0</string>
+    <string name="reset_game">Reiniciar\npartida</string>
+    <string name="reset_count">Reiniciar\ncontador</string>
+    <string name="turn">Turno</string>
+    <string name="logo">Logo</string>
+    <string name="play">Jugar</string>
+    <string name="info">Información</string>
 </resources>
