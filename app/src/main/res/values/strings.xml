@@ -8,4 +8,5 @@
     <string name="logo">Logo</string>
     <string name="play">Jugar</string>
     <string name="info">Información</string>
+    <string name="info_reto">Aplicación #1 desarrollada por @DavidThar para el reto mensual de aplicaciones organizado por MoureDev</string>
 </resources>

@@ -1,11 +1,27 @@
 package com.davidthar.conecta4
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.davidthar.conecta4.databinding.ActivityMainBinding
+
+private lateinit var binding : ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+
+        binding.btnPlay.setOnClickListener {
+            val intent = Intent(this,GameActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.btnInfo.setOnClickListener {
+            val intent = Intent(this,InfoActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
