@@ -1,15 +1,19 @@
 package com.davidthar.conecta4
 
+/*
+* Coded by @DavidThar
+* Challenge #1 (January)
+* for Monthly-App-Challenge-2022 by MoureDev
+ */
+
 import android.app.Dialog
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import android.view.Window
 import android.widget.Button
 import android.widget.ImageView
-import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import com.davidthar.conecta4.databinding.ActivityGameBinding
@@ -258,6 +262,7 @@ class GameActivity : AppCompatActivity() {
             redScore = 0
             yellowScore = 0
             setScore()
+            resetGame()
         }
 
         binding.btnResetGame.setOnClickListener { resetGame() }
