@@ -1,9 +1,16 @@
 package com.davidthar.conecta4
 
+import android.app.Dialog
 import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import android.view.Window
+import android.widget.Button
 import android.widget.ImageView
+import android.widget.LinearLayout
+import android.widget.TextView
 import androidx.core.content.ContextCompat
 import com.davidthar.conecta4.databinding.ActivityGameBinding
 import nl.dionsegijn.konfetti.KonfettiView
@@ -115,7 +122,7 @@ class GameActivity : AppCompatActivity() {
 
         if(countHorizontal>=4 || countVertical>=4 || countDiagonal1 >=4 || countDiagonal2 >= 4){
             setKonfetti(binding.viewKonfetti,color)
-            println("WIN")
+            createWinDialog(color)
             when(color){
                 1 -> redScore++
                 2 -> yellowScore++
@@ -253,16 +260,18 @@ class GameActivity : AppCompatActivity() {
             setScore()
         }
 
-        binding.btnResetGame.setOnClickListener {
-            setArrays()
-            arrayBoard.forEach { array ->
-                array.forEach {
-                    it.image.setImageResource(R.drawable.ficha_vacia)
-                }
+        binding.btnResetGame.setOnClickListener { resetGame() }
+    }
+
+    private fun resetGame(){
+        setArrays()
+        arrayBoard.forEach { array ->
+            array.forEach {
+                it.image.setImageResource(R.drawable.ficha_vacia)
             }
-            turn = 1
-            binding.btnTurn.backgroundTintList = ContextCompat.getColorStateList(this,R.color.red_piece)
         }
+        turn = 1
+        binding.btnTurn.backgroundTintList = ContextCompat.getColorStateList(this,R.color.red_piece)
     }
 
     private fun setScore() {
@@ -270,9 +279,8 @@ class GameActivity : AppCompatActivity() {
         binding.btnYellowScore.text = yellowScore.toString()
     }
 
-    fun setKonfetti(konfettiView : KonfettiView, color : Int){
-        var konfettiColor : Int
-        if (color==1) konfettiColor = Color.RED else konfettiColor = Color.YELLOW
+    private fun setKonfetti(konfettiView : KonfettiView, color : Int){
+        val konfettiColor : Int = if (color==1) Color.RED else Color.YELLOW
         konfettiView.build()
             .addColors(konfettiColor)
             .setDirection(0.0, 359.0)
@@ -283,5 +291,37 @@ class GameActivity : AppCompatActivity() {
             .addSizes(Size(12))
             .setPosition(-50f, konfettiView.width + 50f, -50f, -50f)
             .streamFor(300, 2000L)
+    }
+
+    private fun createWinDialog(color : Int){
+        val dialog = Dialog(this)
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
+        dialog.setContentView(R.layout.dialog_win)
+        dialog.setCancelable(false)
+
+        val btnBack = dialog.findViewById(R.id.win_dialog_back) as Button
+        val title =  dialog.findViewById<TextView>(R.id.win_dialog_title)
+        val text = dialog.findViewById<TextView>(R.id.win_dialog_text)
+
+        if(color==1){
+            title.setTextColor(ContextCompat.getColor(this,R.color.red_piece))
+            title.background = ContextCompat.getDrawable(this, R.drawable.dialog_red_title)
+            text.text = getString(R.string.color_wins,"rojo")
+            btnBack.backgroundTintList = ContextCompat.getColorStateList(this, R.color.red_piece)
+        }else{
+            title.setTextColor(ContextCompat.getColor(this,R.color.yellow_piece))
+            title.background = ContextCompat.getDrawable(this, R.drawable.dialog_yellow_title)
+            text.text = getString(R.string.color_wins,"amarillo")
+            btnBack.backgroundTintList = ContextCompat.getColorStateList(this, R.color.yellow_piece)
+        }
+
+        title.setTextColor(ContextCompat.getColor(this,R.color.white))
+
+        btnBack.setOnClickListener {
+            dialog.dismiss()
+            resetGame()
+        }
+        dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+        dialog.show()
     }
 }

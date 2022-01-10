@@ -11,6 +11,8 @@
     <color name="primary_color">#7dbcf0</color>
     <color name="secondary_color">#315E85</color>
 
+    <color name="background_dialog_color">#C3C3C3</color>
+
     <color name="red_piece">#de2c49</color>
     <color name="yellow_piece">#e0d853</color>
 

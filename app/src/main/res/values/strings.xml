@@ -9,4 +9,7 @@
     <string name="play">Jugar</string>
     <string name="info">Información</string>
     <string name="info_reto">Aplicación #1 desarrollada por @DavidThar para el reto mensual de aplicaciones organizado por MoureDev</string>
+    <string name="color_wins">Color %1$s gana</string>
+    <string name="volver">Volver</string>
+    <string name="victoria">Victoria!</string>
 </resources>
