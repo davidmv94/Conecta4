@@ -1,5 +1,5 @@
 # Conecta4
-Aplicacion #1 para el reto mensual de aplicaciones organizado por MoureDev
+Aplicacion #1 para el reto mensual de aplicaciones organizado por [MoureDev](https://github.com/mouredev)
 
 ![https://github.com/davidthar/Conecta4](https://raw.githubusercontent.com/davidthar/Conecta4/master/readme_github.png)
 
@@ -7,6 +7,7 @@ Aplicacion #1 para el reto mensual de aplicaciones organizado por MoureDev
 Puedes descargar la aplicación en formato .apk desde [aquí](https://github.com/davidthar/Conecta4/raw/master/conecta4_davidthar.apk).
 
 ## Información sobre el reto
+Puedes encontrar más información sobre el reto [aquí](https://github.com/mouredev/Monthly-App-Challenge-2022)
 **CONECTA 4:** Crea el juego conecta cuatro. Tienes un ejemplo parecido [aquí](https://solitariosonline.es/conecta-4). 
 
 Requisitos:
