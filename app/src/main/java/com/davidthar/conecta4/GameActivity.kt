@@ -138,6 +138,7 @@ class GameActivity : AppCompatActivity() {
     }
 
     private fun setArrows() {
+
         for(x in 0..6){
             arrayArrows[x].setOnClickListener {
                 when {
