@@ -17,7 +17,8 @@
         android:layout_marginTop="5dp"
         android:layout_marginStart="40dp"
         android:layout_marginEnd="40dp"
-        android:src="@drawable/logo"/>
+        android:src="@drawable/logo"
+        android:contentDescription="@string/logo" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnPlay"

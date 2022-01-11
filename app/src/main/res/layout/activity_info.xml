@@ -34,12 +34,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="10dp"
-            android:src="@drawable/github_icon"/>
+            android:src="@drawable/github_icon"
+            android:contentDescription="@string/github_logo" />
         <ImageView
             android:id="@+id/iv_twitter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/twitter_icon"/>
+            android:src="@drawable/twitter_icon"
+            android:contentDescription="@string/twitter_logo" />
     </LinearLayout>
 
     <TextView
@@ -69,6 +71,7 @@
         android:layout_marginBottom="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        android:contentDescription="@string/github_mouredev" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

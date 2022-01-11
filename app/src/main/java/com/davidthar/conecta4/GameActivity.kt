@@ -138,81 +138,17 @@ class GameActivity : AppCompatActivity() {
     }
 
     private fun setArrows() {
-        arrayArrows[0].setOnClickListener {
-            when {
-                arrayBoard[0][5].color == 0 -> setPiece(0,5,turn)
-                arrayBoard[0][4].color == 0 -> setPiece(0,4,turn)
-                arrayBoard[0][3].color == 0 -> setPiece(0,3,turn)
-                arrayBoard[0][2].color == 0 -> setPiece(0,2,turn)
-                arrayBoard[0][1].color == 0 -> setPiece(0,1,turn)
-                arrayBoard[0][0].color == 0 -> setPiece(0,0,turn)
+        for(x in 0..6){
+            arrayArrows[x].setOnClickListener {
+                when {
+                    arrayBoard[x][5].color == 0 -> setPiece(x,5,turn)
+                    arrayBoard[x][4].color == 0 -> setPiece(x,4,turn)
+                    arrayBoard[x][3].color == 0 -> setPiece(x,3,turn)
+                    arrayBoard[x][2].color == 0 -> setPiece(x,2,turn)
+                    arrayBoard[x][1].color == 0 -> setPiece(x,1,turn)
+                    arrayBoard[x][0].color == 0 -> setPiece(x,0,turn)
+                }
             }
-        }
-        arrayArrows[1].setOnClickListener {
-            when {
-                arrayBoard[1][5].color == 0 -> setPiece(1,5,turn)
-                arrayBoard[1][4].color == 0 -> setPiece(1,4,turn)
-                arrayBoard[1][3].color == 0 -> setPiece(1,3,turn)
-                arrayBoard[1][2].color == 0 -> setPiece(1,2,turn)
-                arrayBoard[1][1].color == 0 -> setPiece(1,1,turn)
-                arrayBoard[1][0].color == 0 -> setPiece(1,0,turn)
-            }
-            
-        }
-        arrayArrows[2].setOnClickListener {
-            when {
-                arrayBoard[2][5].color == 0 -> setPiece(2,5,turn)
-                arrayBoard[2][4].color == 0 -> setPiece(2,4,turn)
-                arrayBoard[2][3].color == 0 -> setPiece(2,3,turn)
-                arrayBoard[2][2].color == 0 -> setPiece(2,2,turn)
-                arrayBoard[2][1].color == 0 -> setPiece(2,1,turn)
-                arrayBoard[2][0].color == 0 -> setPiece(2,0,turn)
-            }
-            
-        }
-        arrayArrows[3].setOnClickListener {
-            when {
-                arrayBoard[3][5].color == 0 -> setPiece(3,5,turn)
-                arrayBoard[3][4].color == 0 -> setPiece(3,4,turn)
-                arrayBoard[3][3].color == 0 -> setPiece(3,3,turn)
-                arrayBoard[3][2].color == 0 -> setPiece(3,2,turn)
-                arrayBoard[3][1].color == 0 -> setPiece(3,1,turn)
-                arrayBoard[3][0].color == 0 -> setPiece(3,0,turn)
-            }
-            
-        }
-        arrayArrows[4].setOnClickListener {
-            when {
-                arrayBoard[4][5].color == 0 -> setPiece(4,5,turn)
-                arrayBoard[4][4].color == 0 -> setPiece(4,4,turn)
-                arrayBoard[4][3].color == 0 -> setPiece(4,3,turn)
-                arrayBoard[4][2].color == 0 -> setPiece(4,2,turn)
-                arrayBoard[4][1].color == 0 -> setPiece(4,1,turn)
-                arrayBoard[4][0].color == 0 -> setPiece(4,0,turn)
-            }
-            
-        }
-        arrayArrows[5].setOnClickListener {
-            when {
-                arrayBoard[5][5].color == 0 -> setPiece(5,5,turn)
-                arrayBoard[5][4].color == 0 -> setPiece(5,4,turn)
-                arrayBoard[5][3].color == 0 -> setPiece(5,3,turn)
-                arrayBoard[5][2].color == 0 -> setPiece(5,2,turn)
-                arrayBoard[5][1].color == 0 -> setPiece(5,1,turn)
-                arrayBoard[5][0].color == 0 -> setPiece(5,0,turn)
-            }
-            
-        }
-        arrayArrows[6].setOnClickListener {
-            when {
-                arrayBoard[6][5].color == 0 -> setPiece(6,5,turn)
-                arrayBoard[6][4].color == 0 -> setPiece(6,4,turn)
-                arrayBoard[6][3].color == 0 -> setPiece(6,3,turn)
-                arrayBoard[6][2].color == 0 -> setPiece(6,2,turn)
-                arrayBoard[6][1].color == 0 -> setPiece(6,1,turn)
-                arrayBoard[6][0].color == 0 -> setPiece(6,0,turn)
-            }
-            
         }
     }
 
