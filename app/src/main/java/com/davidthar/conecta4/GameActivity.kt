@@ -26,6 +26,7 @@ private lateinit var binding : ActivityGameBinding
 private var turn = 1
 private var redScore = 0
 private var yellowScore = 0
+private var starterColor = 1
 
 private var MAX_X = 6
 private var MAX_Y = 5
@@ -126,6 +127,7 @@ class GameActivity : AppCompatActivity() {
 
         if(countHorizontal>=4 || countVertical>=4 || countDiagonal1 >=4 || countDiagonal2 >= 4){
             setKonfetti(binding.viewKonfetti,color)
+            arrayArrows.forEach { it.setOnClickListener{} }
             createWinDialog(color)
             when(color){
                 1 -> redScore++
@@ -269,14 +271,23 @@ class GameActivity : AppCompatActivity() {
     }
 
     private fun resetGame(){
+        starterColor = if (starterColor == 1) 2 else 1
+
         setArrays()
+        setArrows()
         arrayBoard.forEach { array ->
             array.forEach {
                 it.image.setImageResource(R.drawable.ficha_vacia)
             }
         }
-        turn = 1
-        binding.btnTurn.backgroundTintList = ContextCompat.getColorStateList(this,R.color.red_piece)
+        if(starterColor == 1){
+            turn = 1
+            binding.btnTurn.backgroundTintList = ContextCompat.getColorStateList(this,R.color.red_piece)
+        }else{
+            turn = 2
+            binding.btnTurn.backgroundTintList = ContextCompat.getColorStateList(this,R.color.yellow_piece)
+        }
+
     }
 
     private fun setScore() {
