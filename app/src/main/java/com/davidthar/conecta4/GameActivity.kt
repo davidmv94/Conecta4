@@ -156,8 +156,8 @@ class GameActivity : AppCompatActivity() {
     private fun setPiece(x : Int, y : Int, color : Int){
         arrayBoard[x][y].color = color
         when(color){
-            1 -> arrayBoard[x][y].image.setImageResource(R.drawable.ficha_roja)
-            2 -> arrayBoard[x][y].image.setImageResource(R.drawable.ficha_amarilla)
+            1 -> arrayBoard[x][y].image.setImageResource(R.drawable.red_piece)
+            2 -> arrayBoard[x][y].image.setImageResource(R.drawable.yellow_piece)
         }
         checkWin(x,y,color)
         changeTurn()
@@ -214,7 +214,7 @@ class GameActivity : AppCompatActivity() {
         setArrows()
         arrayBoard.forEach { array ->
             array.forEach {
-                it.image.setImageResource(R.drawable.ficha_vacia)
+                it.image.setImageResource(R.drawable.empty_piece)
             }
         }
         if(starterColor == 1){
